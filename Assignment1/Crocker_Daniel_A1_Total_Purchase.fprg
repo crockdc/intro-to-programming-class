@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Roy Parham"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-25 11:38:24 AM"/>
+        <attribute name="created" value="Um95IFBhcmhhbTtERVNLVE9QLTBSSlZET1I7MjAyMS0wNS0xNjswOToyNzozOCBBTTszMzI0"/>
+        <attribute name="edited" value="Um95IFBhcmhhbTtERVNLVE9QLTBSSlZET1I7MjAyMS0wNS0xNjswNDo1NjoxNyBQTTsxNDszNDkz"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDEtMjU7MTE6Mzg6MjQgQU07MTY7MjM4Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER: Daniel Crocker&#13;&#10;PROGRAM NAME: Total Purchases&#13;&#10;DATE WRITTEN: January 25, 2022&#13;&#10;PURPOSE: Ask for the price of five items being purchased, then display the subtotal, sales tax(using 7%), and the total sale."/>
+            <comment text="Declare variables in alphabetical order"/>
+            <declare name="item1, item2, item3, item4, item5, salesTax, subtotal, total" type="Real" array="False" size=""/>
+            <comment text="Initialize variables used to store calculations or results"/>
+            <assign variable="subtotal" expression="0.0"/>
+            <assign variable="total" expression="0.0"/>
+            <assign variable="salesTax" expression="0.0"/>
+            <comment text="Input Operations"/>
+            <output expression="&quot;Enter the price of item #01&quot;" newline="True"/>
+            <input variable="item1"/>
+            <output expression="&quot;Enter the price of item #02&quot;" newline="True"/>
+            <input variable="item2"/>
+            <output expression="&quot;Enter the price of item #03&quot;" newline="True"/>
+            <input variable="item3"/>
+            <output expression="&quot;Enter the price of item #04&quot;" newline="True"/>
+            <input variable="item4"/>
+            <output expression="&quot;Enter the price of item #05&quot;" newline="True"/>
+            <input variable="item5"/>
+            <comment text="Calculate the subtotal of the items."/>
+            <assign variable="subtotal" expression="item1 + item2 + item3 + item4 + item5"/>
+            <comment text="Calculate the amount of sales tax(using 7%)"/>
+            <assign variable="salesTax" expression="subtotal * .07"/>
+            <comment text="Calculate the total of the sale, including sales tax."/>
+            <assign variable="total" expression="subtotal + salesTax"/>
+            <comment text="OUTPUT OPERATIONS"/>
+            <comment text="REPORT HEADING AND COLUMN HEADINGS"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <output expression="&quot;TOTAL PURCHASE RECEIPT         /        INFORMATION&quot;" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="Display the price for each item number."/>
+            <output expression="&quot;PRICE FOR ITEM #01:                      &quot; &amp; &quot;$&quot; &amp; toFixed(item1, 2)" newline="True"/>
+            <output expression="&quot;PRICE FOR ITEM #02:                      &quot; &amp; &quot;$&quot; &amp; toFixed(item2, 2)" newline="True"/>
+            <output expression="&quot;PRICE FOR ITEM #03:                      &quot; &amp; &quot;$&quot; &amp; toFixed(item3, 2)" newline="True"/>
+            <output expression="&quot;PRICE FOR ITEM #04:                      &quot; &amp; &quot;$&quot; &amp; toFixed(item4, 2)" newline="True"/>
+            <output expression="&quot;PRICE FOR ITEM #05:                      &quot; &amp; &quot;$&quot; &amp; toFixed(item5, 2)" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="Display the subtotal, the sales tax, and the combined total."/>
+            <output expression="&quot;SUBTOTAL = &quot; &amp; &quot;$&quot; &amp; toFixed(subtotal, 2)" newline="True"/>
+            <output expression="&quot;SALES TAX = &quot; &amp; &quot;$&quot; &amp; toFixed(salesTax, 2)" newline="True"/>
+            <output expression="&quot;TOTAL SALES = &quot; &amp; &quot;$&quot; &amp; toFixed(total, 2)" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

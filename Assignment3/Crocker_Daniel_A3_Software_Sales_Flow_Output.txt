@@ -1,0 +1,16 @@
+What is the price of the Software?
+109.99
+How many software packages are to be purchased?
+95
+
+
+====================================================================
+The cost per software package = $109.99
+The total number of software packages purchased = 95
+====================================================================
+====================================================================
+The discount % rate = 30.00%
+The calculated discount amount = $3134.72
+Total amount of software purchase prior to discount = $10449.05
+Final software purchase price after applying discount = $7314.34
+====================================================================

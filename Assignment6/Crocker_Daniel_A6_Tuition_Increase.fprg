@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="crock"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-05 03:59:09 PM"/>
+        <attribute name="created" value="Y3JvY2s7REFOSUVMOzIwMjItMDMtMDU7MTE6NTg6MjkgQU07MjIyOA=="/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDMtMDU7MTI6MTE6NTMgUE07MztCZXR0eWUgSmV3ZWwgU2lnaCBQYTtERVNLVE9QLTlBTjM1VDg7MjAyMS0wNi0wODswOTo1OTo0NSBQTTtDcm9ja2VyX0RhbmllbF9BNV9SYW5kb21fTnVtYmVyX0d1ZXNzaW5nX0dBTUVfUmV2aXNlZC5mcHJnOzEyMjAx"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDMtMDU7MDM6NTk6MDkgUE07MjE7MjQwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  Daniel Crocker&#13;&#10;PROGRAM:     Tuition Increase&#13;&#10;DATE WRITTEN: 3/5/2022&#13;&#10;PURPOSE: Use a FOR loop to calculate the projected semester tuition amount for a specified number of years."/>
+            <comment text="Declare variables"/>
+            <declare name="percentIncrease, tuition" type="Real" array="False" size=""/>
+            <declare name="years, yearsCount" type="Integer" array="False" size=""/>
+            <comment text="Ask user how much the initial tuition is, what the annual percentage rate increase is, and for how many years."/>
+            <output expression="&quot;What is the amount of the starting tuition?[Decimals may be entered]&quot;" newline="True"/>
+            <input variable="tuition"/>
+            <output expression="&quot;What is the percentage of increase?[Enter in decimal format(i.e. for 3% type 0.03)]&quot;" newline="True"/>
+            <input variable="percentIncrease"/>
+            <output expression="&quot;How many years are you projecting the tuition increase?[Enter whole numbers only]&quot;" newline="True"/>
+            <input variable="years"/>
+            <comment text="Display a header that organizes the data that follows into columns."/>
+            <output expression="&quot;======================================================&quot;" newline="True"/>
+            <output expression="&quot;PROJECTED TUITIONS(PER SEMESTER FOR FULL-TIME STUDENTS)&quot;" newline="True"/>
+            <output expression="&quot;======================================================&quot;" newline="True"/>
+            <output expression="&quot;YEAR          PROJECTED TUITION&quot;" newline="True"/>
+            <output expression="&quot;======================================================&quot;" newline="True"/>
+            <comment text="Create a FOR loop utilizing the yearCount variable to keep track as the loop iterates from zero in steps of one, and reaching the value of the year variable."/>
+            <for variable="yearsCount" start="1" end="years" direction="inc" step="1">
+                <comment text="As the FOR loop iterates, the tuition variable is recalculated utilizing the percentage variable. Each iteration "/>
+                <assign variable="tuition" expression="tuition*percentIncrease+tuition"/>
+                <output expression="yearsCount &amp; &quot;                     &quot; &amp; &quot;$&quot; &amp; ToFixed(tuition, 2)" newline="True"/>
+            </for>
+            <comment text="Maintaining the format of the header, create a closing statement that displays the annual percentage increase that the annual tuition rates were based off of."/>
+            <output expression="&quot;======================================================&quot;" newline="True"/>
+            <output expression="&quot;THESE PROJECTIONS REFLECT A &quot; &amp; percentIncrease * 100 &amp; &quot;% ANNUAL INCREASE&quot;" newline="True"/>
+            <output expression="&quot;======================================================&quot;" newline="True"/>
+            <output expression="&quot;This program is complete - Edited by Daniel Crocker&quot;" newline="True"/>
+            <comment text="End Program"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-23 09:59:51 PM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDYtMDg7MDk6NTk6NDUgUE07NDExNA=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDYtMDg7MTA6MDA6MzYgUE07MjtwYXJoYW1iO1cwMDA0UjAxMDhDMDAxQjsyMDIxLTA0LTA1OzA5OjQyOjE2IEFNO2xhc3RuYW1lX2ZpcnN0bmFtZV9HdWVzc19OdW1iZXJfYmFzaWNfVmVyc2lvbi5mcHJnOzEyMzI1"/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMTAtMDU7MDc6NDM6MTkgQU07MTM7NDI0Mg=="/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDItMjM7MDk6NTk6NDUgUE07MTtwYXJoYW1iO1cwMDA0UjAxMDhDMDAxQjsyMDE5LTAyLTI1OzEwOjIxOjE0IEFNO0Nyb2NrZXJfRGFuaWVsX0NvdXJzZV9UZXN0X0F2ZXJhZ2UuZnByZzs5MjA3"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDItMjM7MDk6NTk6NTEgUE07MTI7MjQwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  Daniel Crocker&#13;&#10;PROGRAM:     Guess the number&#13;&#10;DATE WRITTEN: 2/24/2022&#13;&#10;PURPOSE: USE WHILE LOOP TO GUESS A NUMBER with a built in RANDOM NUMBER GENERATOR function"/>
+            <comment text="Declare variables"/>
+            <comment text="Variable to keep track if user wants to play game again"/>
+            <declare name="again" type="String" array="False" size=""/>
+            <comment text="Variable keeps count of how many guesses the user makes in order to guess the correct random number"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <comment text="Variable user enters to guess a number"/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <comment text="Variable to store the Random value chosen by the computer Random number generator function"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <comment text="Variable initially set to &quot;y&quot; to continue through the first while loop which is used later in program"/>
+            <assign variable="again" expression="&quot;y&quot;"/>
+            <comment text="Initially the again variable is set to &quot;y&quot; which makes the loop true. Later the user will choose whether to keep playing and will utilize this loop."/>
+            <while expression="again == &quot;y&quot; or again == &quot;Y&quot;">
+                <comment text="count is initally set to 0"/>
+                <assign variable="count" expression="0"/>
+                <comment text="Call the Random function that will select a random number between 0 and 100 inclusive"/>
+                <assign variable="number" expression="Random(101)"/>
+                <comment text="Output statement to provide directions to user"/>
+                <output expression="&quot;Guess a magic number between 0 and 100 &quot;" newline="True"/>
+                <comment text="guess will be initially set to -1"/>
+                <assign variable="guess" expression="-1"/>
+                <comment text="While Loop to prompt the user to enter numbers continuously until it matches the randomly generated number."/>
+                <while expression="guess != number">
+                    <comment text="prompt user to guess the number"/>
+                    <output expression="&quot; Enter your guess [positive whole values only] &quot;" newline="True"/>
+                    <input variable="guess"/>
+                    <comment text="count variable increases by 1 after each guess"/>
+                    <assign variable="count" expression="count + 1"/>
+                    <comment text="nested if to analyze guessed value entered by user"/>
+                    <if expression="guess == number">
+                        <then>
+                            <comment text="Tells the user when they guess correctly and in how many attempts"/>
+                            <output expression="&quot;You guessed the correct number ==&gt; &quot; &amp; guess &amp; &quot;, in &quot; &amp; count &amp; &quot; attempts.&quot;" newline="True"/>
+                            <comment text="Tells the user whether they are a winner with 4 or less attempts, or better luck next time with greater than 4"/>
+                            <if expression="count &lt;= 4">
+                                <then>
+                                    <output expression="&quot;Congratulations, you are a winner!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Unfortunately it took you more than 4 attempts to guess the correct number, better luck next time!&quot;" newline="True"/>
+                                </else>
+                            </if>
+                            <comment text="Asks user if they would like to play again. Assigns string to the again variable"/>
+                            <output expression="&quot;Guess The Number Game again? [Type 'y' or 'Y' for yes, otherwise type 'no' to exit the program]&quot;" newline="True"/>
+                            <input variable="again"/>
+                        </then>
+                        <else>
+                            <if expression="guess &gt; number">
+                                <then>
+                                    <output expression="&quot;Your guess of &quot; &amp; guess &amp; &quot; is too high&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Your guess of &quot; &amp; guess &amp; &quot; is too low&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <comment text="end while loop"/>
+                </while>
+            </while>
+            <comment text="Tells the user thank you for playing after the user chooses to exit"/>
+            <output expression="&quot;Thanks for playing the Guess The Number Game - Have a nice day!&quot;" newline="True"/>
+            <output expression="&quot;THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

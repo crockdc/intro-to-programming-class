@@ -1,0 +1,41 @@
+==============================================================
+CLASS TEST SCORE INFORMATION
+==============================================================
+STUDENT NAME                       TEST SCORE
+==============================================================
+Do you wish to enter a student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter the student's name 
+Emily Rogers
+What is the student's test score? 
+92.14
+Emily Rogers                        92.14%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter the student's name 
+Jackson Reynolds
+What is the student's test score? 
+87.33
+Jackson Reynolds                        87.33%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter the student's name 
+Pamela Garrett
+What is the student's test score? 
+77.71
+Pamela Garrett                        77.71%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+no
+ 
+====================================================================================================
+TOTAL TEST SCORES =                257.18
+====================================================================================================
+THE CLASS AVERAGE =                85.73%
+====================================================================================================
+GOOD CLASS AVERAGE
+====================================================================================================
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER
+====================================================================================================

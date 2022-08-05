@@ -1,0 +1,44 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\Assignments\Assignment5\Crocker_Daniel_A5_Random_Number_Guessing_GAME_Revised.py
+Guess a magic number between 0 and 100 
+Enter your guess[positive whole values only]: 
+50
+Your guess of 50 is too high
+Enter your guess[positive whole values only]: 
+25
+Your guess of 25 is too low
+Enter your guess[positive whole values only]: 
+33
+You guessed the correct number ==> 33, in 3 attempts.
+Congratulations, you are a winner!
+Guess The Number Game again? [Type 'y' or 'Y' for yes, otherwise type 'no' to exit the program]
+y
+Guess a magic number between 0 and 100 
+Enter your guess[positive whole values only]: 
+50
+Your guess of 50 is too low
+Enter your guess[positive whole values only]: 
+75
+Your guess of 75 is too low
+Enter your guess[positive whole values only]: 
+88
+Your guess of 88 is too high
+Enter your guess[positive whole values only]: 
+80
+Your guess of 80 is too low
+Enter your guess[positive whole values only]: 
+84
+Your guess of 84 is too high
+Enter your guess[positive whole values only]: 
+82
+Your guess of 82 is too low
+Enter your guess[positive whole values only]: 
+83
+You guessed the correct number ==> 83, in 7 attempts.
+Unfortunately it took you more than 4 attempts to guess the correct number, better luck next time!
+Guess The Number Game again? [Type 'y' or 'Y' for yes, otherwise type 'no' to exit the program]
+no
+Thanks for playing the Guess The Number Game - Have a nice day!
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER

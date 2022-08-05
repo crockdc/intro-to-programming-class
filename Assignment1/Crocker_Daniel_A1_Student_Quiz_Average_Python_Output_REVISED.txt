@@ -1,0 +1,39 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\2.2\Crocker_Daniel_A1_Student_Quiz_Average.py
+Enter the name of Student #1
+Billy
+Enter quiz #1 results for Billy
+87.3
+Enter the name of Student #2
+Sarah
+Enter quiz #2 results for Sarah
+89.1
+Enter the name of Student #3
+Josephine
+Enter quiz #3 results for Josephine
+68.9
+Enter the name of Student #4
+Joshua
+Enter quiz #4 results for Joshua
+84.2
+Enter the name of Student #5
+Sheena
+Enter quiz #5 results for Sheena
+96.5
+============================================================
+                      STUDENT QUIZZES                       
+============================================================
+STUDENT NAME                                    QUZZES
+============================================================
+Billy                                           87.30
+Sarah                                           89.10
+Josephine                                       68.90
+Joshua                                          84.20
+Sheena                                          96.50
+============================================================
+Total of the quizzes =   426.00
+============================================================
+QUIZ AVERAGE =            85.20%
+============================================================

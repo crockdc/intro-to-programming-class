@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-05 07:43:19 AM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDYtMDg7MDk6NTk6NDUgUE07NDExNA=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDYtMDg7MTA6MDA6MzYgUE07MjtwYXJoYW1iO1cwMDA0UjAxMDhDMDAxQjsyMDIxLTA0LTA1OzA5OjQyOjE2IEFNO2xhc3RuYW1lX2ZpcnN0bmFtZV9HdWVzc19OdW1iZXJfYmFzaWNfVmVyc2lvbi5mcHJnOzEyMzI1"/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMTAtMDU7MDc6NDM6MTkgQU07MTM7NDI0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  first &amp; last name&#13;&#10;PROGRAM:     Guess the number&#13;&#10;DATE WRITTEN: 4/6/2021&#13;&#10;PURPOSE: USE WHILE LOOP TO GUESS A NUMBER with a built in RANDOM NUMBER GENERATOR function"/>
+            <comment text="Declare variables"/>
+            <comment text="Variable user enters to guess a number"/>
+            <declare name="guess" type="Integer" array="False" size=""/>
+            <comment text="Variable to store the Random value chosen by the computer Random number generator function"/>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <comment text="Call the Random function that will select a random number between 0 and 100 inclusive"/>
+            <assign variable="number" expression="Random(101)"/>
+            <comment text="Output statement to provide directions to user"/>
+            <output expression="&quot;Guess a magic number between 0 and 100 &quot;" newline="True"/>
+            <comment text="guess will be initially set to -1"/>
+            <assign variable="guess" expression="-1"/>
+            <comment text="While Loop to prompt the user to enter numbers continuously until it matches the randomly generated number."/>
+            <while expression="guess != number">
+                <comment text="prompt user to guess the number"/>
+                <output expression="&quot; Enter your guess [positive whole values only] &quot;" newline="True"/>
+                <input variable="guess"/>
+                <comment text="nested if to analyze guessed value entered by user"/>
+                <if expression="guess == number">
+                    <then>
+                        <output expression="&quot;You guessed the correct number ==&gt; &quot; &amp; guess" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="guess &gt; number">
+                            <then>
+                                <output expression="&quot;Your guess of &quot; &amp; guess &amp; &quot; is too high&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Your guess of &quot; &amp; guess &amp; &quot; is too low&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <comment text="end while loop"/>
+            </while>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Roy Parham"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-24 09:20:34 PM"/>
+        <attribute name="created" value="Um95IFBhcmhhbTtERVNLVE9QLTBSSlZET1I7MjAyMS0wNS0xNjswOToyNzozOCBBTTszMzI0"/>
+        <attribute name="edited" value="Um95IFBhcmhhbTtERVNLVE9QLTBSSlZET1I7MjAyMS0wNS0xNjswNDo1NjoxNyBQTTsxNDszNDkz"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDEtMjQ7MDk6MjA6MzQgUE07MTsyMzQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER: Daniel Crocker&#13;&#10;PROGRAM NAME: Quiz Average&#13;&#10;DATE WRITTEN: January 24, 2022&#13;&#10;PURPOSE: Use Input, Assignment, Output statements to calculate the average of 5 quizzes for 5 different students."/>
+            <comment text="Declare variables in alphabetical order"/>
+            <declare name="average, quiz1, quiz2, quiz3, quiz4, quiz5, total" type="Real" array="False" size=""/>
+            <declare name="Name1, Name2, Name3, Name4, Name5" type="String" array="False" size=""/>
+            <comment text="Initialize variables used to store calculations or results"/>
+            <assign variable="average" expression="0.0"/>
+            <assign variable="total" expression="0.0"/>
+            <comment text="Input Operations"/>
+            <output expression="&quot;Enter the name of Student #1&quot;" newline="True"/>
+            <input variable="Name1"/>
+            <output expression="&quot;Enter quiz #1 results for &quot; &amp; Name1" newline="True"/>
+            <input variable="quiz1"/>
+            <output expression="&quot;Enter the name of Student #2&quot;" newline="True"/>
+            <input variable="Name2"/>
+            <output expression="&quot;Enter quiz #2 results for &quot; &amp; Name2" newline="True"/>
+            <input variable="quiz2"/>
+            <output expression="&quot;Enter the name of Student #3&quot;" newline="True"/>
+            <input variable="Name3"/>
+            <output expression="&quot;Enter quiz #3 results for &quot; &amp; Name3" newline="True"/>
+            <input variable="quiz3"/>
+            <output expression="&quot;Enter the name of Student #4&quot;" newline="True"/>
+            <input variable="Name4"/>
+            <output expression="&quot;Enter quiz #4 results for &quot; &amp; Name4" newline="True"/>
+            <input variable="quiz4"/>
+            <output expression="&quot;Enter the name of Student #5&quot;" newline="True"/>
+            <input variable="Name5"/>
+            <output expression="&quot;Enter quiz #5 results for &quot; &amp; Name5" newline="True"/>
+            <input variable="quiz5"/>
+            <comment text="Calculate the total of the quizzes"/>
+            <assign variable="total" expression="quiz1 + quiz2 + quiz3 + quiz4 + quiz5"/>
+            <comment text="Calculate the average of the quizzes"/>
+            <assign variable="average" expression="total / 5"/>
+            <comment text="OUTPUT OPERATIONS"/>
+            <comment text="REPORT HEADING AND COLUMN HEADINGS"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <output expression="&quot;                STUDENT QUIZZES&quot;" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <output expression="&quot;STUDENT NAME                   QUZZES&quot;" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="STUDENT NAMES AND QUIZ GRADES"/>
+            <output expression="stuName1 &amp; &quot;                      &quot; &amp; toFixed(quiz1, 2)" newline="True"/>
+            <output expression="stuName2 &amp; &quot;                      &quot; &amp; toFixed(quiz2, 2)" newline="True"/>
+            <output expression="stuName3 &amp; &quot;                      &quot; &amp; toFixed(quiz3, 2)" newline="True"/>
+            <output expression="stuName4 &amp; &quot;                      &quot; &amp; toFixed(quiz4, 2)" newline="True"/>
+            <output expression="stuName5 &amp; &quot;                      &quot; &amp; toFixed(quiz5, 2)" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="Total / sum of Quizzes"/>
+            <output expression="&quot;Total of the quizzes = &quot; &amp; toFixed(total, 2)" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="Quiz Average"/>
+            <output expression="&quot;QUIZ AVERAGE = &quot; &amp; toFixed(average, 2) &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;=======================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

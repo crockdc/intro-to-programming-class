@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-09-23 10:17:50 AM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDItMDU7MDY6NDQ6NDMgUE07NDA5NQ=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDItMDU7MDc6MDE6MDkgUE07MTtwYXJoYW1iO1cwMDA0UjAxMDhDMDAxQjsyMDE5LTA5LTMwOzA2OjIxOjM1IFBNO0xhc3RuYW1lX2ZpcnN0bmFtZV9HUk9TU19QQVlfSUZfU1RBVEVNRU5ULmZwcmc7MTEzODc="/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0wMi0wOTswNDozOTo1NyBBTTszOzI3NzI="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDktMjM7MTA6MTc6NTAgQU07Njs0MTkz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  your first and last name&#13;&#10;PROGRAM NAME: Comparing two different numerical values [numbers]&#13;&#10;DATE WRITTEN: 1/3/2020&#13;&#10;PURPOSE: Apply IF statements to compare two numerical values using SEQUENTIAL IF symbols/statements"/>
+            <comment text="Declare Variables"/>
+            <declare name="numOne" type="Real" array="False" size=""/>
+            <declare name="numTwo" type="Real" array="False" size=""/>
+            <comment text="Input Operations"/>
+            <output expression="&quot;Enter the first numerical value: &quot;" newline="True"/>
+            <input variable="numOne"/>
+            <output expression="&quot;Enter the second numerical value: &quot;" newline="True"/>
+            <input variable="numTwo"/>
+            <output expression="&quot;===================================================================&quot;" newline="True"/>
+            <comment text="NESTED IF STATMENTS"/>
+            <comment text="Check to see if the values are equal"/>
+            <if expression="(numOne == numTwo)">
+                <then>
+                    <output expression="&quot;Numerical Value #01 ==&gt; &quot; &amp; ToFixed(numOne, 2) &amp; &quot; and Numerical Value #02 ==&gt; &quot; &amp; ToFixed(numTwo, 2) &amp; &quot; are equal.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="Check to see first value is larger than the second value"/>
+                    <if expression="(numOne &gt; numTwo)">
+                        <then>
+                            <output expression="&quot;Numerical Value #01 ==&gt; &quot; &amp; ToFixed(numOne, 2) &amp; &quot; is greater than Numerical Value #02 ==&gt; &quot; &amp;ToFixed(numTwo, 2) &amp; &quot;.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="(numTwo &gt; numOne)">
+                                <then>
+                                    <comment text="Check to see second value is larger than the first value"/>
+                                    <output expression="&quot;Numerical Value #02 ==&gt; &quot; &amp; ToFixed(numTwo, 2) &amp; &quot; is greater than Numerical Value #01 ==&gt; &quot; &amp; ToFixed(numOne, 2) &amp; &quot;.&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;===================================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

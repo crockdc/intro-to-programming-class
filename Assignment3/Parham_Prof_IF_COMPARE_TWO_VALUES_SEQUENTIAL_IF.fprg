@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-09-23 12:50:06 PM"/>
+        <attribute name="created" value="QmV0dHllO0pFV0VMX1NJR0g7MjAxOS0wNi0wMzswMzozMzowMSBQTTsyNjY1"/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAxOS0wNi0wMzswNDo0Mzo0MCBQTTsxOzI3Nzg="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDktMjM7MTI6NDU6NTMgUE07MjtwYXJoYW1iO1cwMDA0UjAxMDhDMDAxQjsyMDE5LTA5LTMwOzA2OjIxOjM1IFBNO0xhc3RuYW1lX2ZpcnN0bmFtZV9HUk9TU19QQVlfSUZfU1RBVEVNRU5ULmZwcmc7MTEzOTg="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDktMjM7MTI6NTA6MDYgUE07Mjs0MjA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  your first and last name&#13;&#10;PROGRAM NAME: Comparing two values USING Nested IF STATEMENTS&#13;&#10;DATE WRITTEN: 1/3/2020&#13;&#10;PURPOSE: Compare two real / float values using IF statements"/>
+            <comment text="Declare all variables in alphabetical order"/>
+            <declare name="number1" type="Real" array="False" size=""/>
+            <declare name="number2" type="Real" array="False" size=""/>
+            <comment text="Input operations"/>
+            <output expression="&quot;Enter the first numerical value [positive values only]&gt; &quot;" newline="True"/>
+            <input variable="number1"/>
+            <output expression="&quot;Enter the second numerical value [positive values only]&gt; &quot;" newline="True"/>
+            <input variable="number2"/>
+            <comment text="Preliminary Output"/>
+            <output expression="&quot;=====================================================&quot;" newline="True"/>
+            <output expression="&quot;The first value = &quot; &amp; number1" newline="True"/>
+            <output expression="&quot;The second value = &quot; &amp; number2" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <output expression="&quot;=====================================================&quot;" newline="True"/>
+            <comment text="Using nested if statement to compare two values"/>
+            <if expression="(number1 == number2)">
+                <then>
+                    <output expression="&quot;The first value is equal to the second value.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="(number1 &lt; number2)">
+                        <then>
+                            <output expression="&quot;The first value is less than the second value.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The first value is greater than the second value.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;=====================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

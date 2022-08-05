@@ -1,0 +1,34 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\Assignments\Assignment6\Crocker_Daniel_A6_Tuition_Increase.py
+What is the amount of the starting tuition?[Decimals may be entered]
+12000.99
+What is the percentage of increase?[Enter in decimal format(i.e. for 3% type 0.03)]
+0.07
+How many years are you projecting the tuition increase?[Enter whole numbers only]
+15
+================================================================================
+PROJECTED TUITIONS(PER SEMESTER FOR FULL-TIME STUDENTS)
+================================================================================
+   YEAR                  PROJECTED TUITION
+================================================================================
+     1                     $  12,841.06
+     2                     $  13,739.93
+     3                     $  14,701.73
+     4                     $  15,730.85
+     5                     $  16,832.01
+     6                     $  18,010.25
+     7                     $  19,270.97
+     8                     $  20,619.94
+     9                     $  22,063.33
+    10                     $  23,607.76
+    11                     $  25,260.31
+    12                     $  27,028.53
+    13                     $  28,920.53
+    14                     $  30,944.96
+    15                     $  33,111.11
+================================================================================
+THESE PROJECTIONS REFLECT A 7.000% ANNUAL INCREASE
+================================================================================
+This program is complete - Edited by Daniel Crocker

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="parhamb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-10 09:53:07 PM"/>
+        <attribute name="created" value="cGFyaGFtYjtXMDAwNFIwMTA4QzAwMUI7MjAxOS0wMi0yNTsxMDoyMToxNCBBTTsyODM0"/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0xMS0wODswODo0OTowNyBQTTsxO3BhcmhhbWI7VzAwMDRSMDEwOEMwMDFCOzIwMTktMDItMjU7MTA6MjE6MTQgQU07bGFzdG5hbWVfZmlyc3RuYW1lX0E0X0ZPUl9Mb29wX0N1c3RvbWVyX0luZm9ybWF0aW9uLmZwcmc7MTEzNzE="/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMS0wNC0yNTswNDo0NTowNiBQTTsxNjsyODMx"/>
+        <attribute name="edited" value="cGFyaGFtYjtXNEc4M1REMjsyMDIxLTA2LTA3OzA2OjM5OjEwIFBNOzE4OzI2OTU="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDktMTU7MDI6Mjk6MTIgUE07Mzs0MjA5"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDItMTA7MDk6NTM6MDcgUE07MTA7MjM5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:   Daniel Crocker&#13;&#10;PROGRAM NAME:  Course Test Average Program using a While Loop&#13;&#10;DATE WRITTEN:  February 10, 2022&#13;&#10;PURPOSE: DEMONSTRATE BASIC WHILE LOOP CONCEPT"/>
+            <comment text="Declare variables in alpha order"/>
+            <comment text="answer is the lcv"/>
+            <comment text="While LOOP&#13;&#10;1) programmer must decide on the lcv name or identifier&#13;&#10;2) lcv must be initialized&#13;&#10;3) lcv must be tested&#13;&#10;4) lcv must be updated inside the WHILE LOOP"/>
+            <declare name="answer, rating, studentName" type="String" array="False" size=""/>
+            <declare name="averageTestScore, testScore, totalTestScore" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <comment text="Initialize variable(s) where calculated results are stored."/>
+            <assign variable="averageTestScore" expression="0.0"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="totalTestScore" expression="0.0"/>
+            <comment text="Main Column Heading"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <output expression="&quot;CLASS TEST SCORE INFORMATION&quot;" newline="True"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <comment text="Sub Column Heading"/>
+            <output expression="&quot;STUDENT NAME                       TEST SCORE&quot;" newline="True"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <comment text="Initialize lcv &quot;answer&quot;"/>
+            <output expression="&quot;Do you wish to enter a student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] &quot;" newline="True"/>
+            <input variable="answer"/>
+            <comment text="Display a blank line"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <comment text="While Loop&#13;&#10;testing the lcv To enter more than one student name and test score"/>
+            <while expression="(answer == &quot;y&quot;) or (answer == &quot;Y&quot;)">
+                <comment text="Input Operations"/>
+                <output expression="&quot;Enter the student's name &quot;" newline="True"/>
+                <input variable="studentName"/>
+                <output expression="&quot;What is the student's test score? &quot;" newline="True"/>
+                <input variable="testScore"/>
+                <comment text="keep a running total of the test scores per student"/>
+                <assign variable="totalTestScore" expression="totalTestScore + testScore"/>
+                <comment text="count or tally the number of students / tests"/>
+                <assign variable="count" expression="count + 1"/>
+                <comment text="Output each student's name and their test score as a column"/>
+                <output expression="studentName &amp; &quot;                        &quot; &amp; toFixed(testScore, 2) &amp; &quot;%&quot;" newline="True"/>
+                <comment text="update lcv answer"/>
+                <output expression="&quot;Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] &quot;" newline="True"/>
+                <input variable="answer"/>
+                <output expression="&quot; &quot;" newline="True"/>
+                <comment text="end while loop"/>
+            </while>
+            <comment text="calculate the average test score"/>
+            <assign variable="averageTestScore" expression="totalTestScore / count"/>
+            <comment text="Nested IF statements that separate into different ratings depending on the average test score of the class"/>
+            <if expression="averageTestScore &gt;= 90.00 and averageTestScore &lt;= 100.00">
+                <then>
+                    <assign variable="rating" expression="&quot;EXCELLENT&quot;"/>
+                </then>
+                <else>
+                    <if expression="averageTestScore &lt; 90 and averageTestScore &gt;= 80">
+                        <then>
+                            <assign variable="rating" expression="&quot;GOOD&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="averageTestScore &lt; 80 and averageTestScore &gt;= 70">
+                                <then>
+                                    <assign variable="rating" expression="&quot;SATISFACTORY&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="averageTestScore &lt; 70 and averageTestScore &gt;= 60">
+                                        <then>
+                                            <assign variable="rating" expression="&quot;MARGINAL&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="averageTestScore &lt; 60">
+                                                <then>
+                                                    <assign variable="rating" expression="&quot;UNSATISFACTORY&quot;"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <comment text="Output operations"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="Displays the total of the student test scores"/>
+            <output expression="&quot;TOTAL TEST SCORES = &quot; &amp; &quot;               &quot; &amp; toFixed(totalTestScore, 2)" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="Displays the average of the test scores of all students"/>
+            <output expression="&quot;THE CLASS AVERAGE = &quot; &amp; &quot;               &quot; &amp; toFixed(averageTestScore, 2) &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="Display the class average rating."/>
+            <output expression="(rating) &amp; &quot; CLASS AVERAGE&quot;" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <output expression="&quot;THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER&quot;" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+Guess a magic number between 0 and 100 
+ Enter your guess [positive whole values only] 
+20
+Your guess of 20 is too low
+ Enter your guess [positive whole values only] 
+50
+Your guess of 50 is too high
+ Enter your guess [positive whole values only] 
+37
+Your guess of 37 is too high
+ Enter your guess [positive whole values only] 
+32
+Your guess of 32 is too low
+ Enter your guess [positive whole values only] 
+34
+Your guess of 34 is too low
+ Enter your guess [positive whole values only] 
+35
+Your guess of 35 is too low
+ Enter your guess [positive whole values only] 
+36
+You guessed the correct number ==> 36, in 7 attempts.
+Unfortunately it took you more than 4 attempts to guess the correct number, better luck next time!
+Guess The Number Game again? [Type 'y' or 'Y' for yes, otherwise type 'no' to exit the program]
+y
+Guess a magic number between 0 and 100 
+ Enter your guess [positive whole values only] 
+50
+Your guess of 50 is too low
+ Enter your guess [positive whole values only] 
+75
+Your guess of 75 is too high
+ Enter your guess [positive whole values only] 
+67
+You guessed the correct number ==> 67, in 3 attempts.
+Congratulations, you are a winner!
+Guess The Number Game again? [Type 'y' or 'Y' for yes, otherwise type 'no' to exit the program]
+no
+Thanks for playing the Guess The Number Game - Have a nice day!
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-15 10:32:32 AM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDE6MjcgQU07NDA3Mw=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDc6MjAgQU07NTtCZXR0eWUgSmV3ZWwgU2lnaCBQYTtERVNLVE9QLTlBTjM1VDg7MjAyMC0wNC0xOTswNjo1Njo0MyBBTTtlbXBsb3llZU5hbWVzX3JldmlzZWQuZnByZzsxMTA4Mg=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDk6MzUgQU07Mzs0MTkw"/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDQtMTU7MTA6MzI6MzIgQU07MjA7MjM3Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Programmer:  Daniel Crocker&#13;&#10;Program Name: Temperature array / list(Assignment 11)&#13;&#10;Date Written: April 15, 2022&#13;&#10;Purpose: Demonstrate how to define, create and display an array with outdoor temperature readings"/>
+            <comment text="declare state, avgTemp, totalTemp variables, define the size of the list/array, define the state"/>
+            <declare name="avgTemp" type="Real" array="False" size=""/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <declare name="state" type="String" array="False" size=""/>
+            <declare name="totalTemp" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter which state you will be entering temperature data for:&quot;" newline="True"/>
+            <input variable="state"/>
+            <output expression="&quot;Please input how many days of weather temperature will be entered into this list:&quot;" newline="True"/>
+            <input variable="size"/>
+            <comment text="count is the lcv/index"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="wTemp" type="Real" array="True" size="size"/>
+            <comment text="initialize variables to 0"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="totalTemp" expression="0"/>
+            <comment text="for loop that iterates the number of days entered, adding each days temperature to the wTemp list while also accumulating the total temperature via the totalTemp variable"/>
+            <while expression="count &lt; size">
+                <output expression="&quot;Enter the temperature Fahrenheit in &quot; &amp; state &amp; &quot; for day #&quot; &amp; count + 1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="wTemp[count]"/>
+                <comment text="update lcv"/>
+                <assign variable="totalTemp" expression="totalTemp + wTemp[count]"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+            <comment text="calculate the average temp by dividing the total temp by the number of days"/>
+            <assign variable="avgTemp" expression="totalTemp / size"/>
+            <comment text="display heading"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <output expression="&quot;Unsorted Daily Temperature List for the State of &quot; &amp; state" newline="True"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="Reset array / list index back to 0"/>
+            <assign variable="count" expression="0"/>
+            <comment text="test lcv / index"/>
+            <comment text="for loop that iterates through the wTemp list the number of days entered by the user and repeats the data in an organized output"/>
+            <while expression="count &lt; size">
+                <output expression="&quot;Day #&quot; &amp; count + 1 &amp; &quot;: &quot; &amp; ToFixed(wTemp[count], 2) &amp; &quot;&#176;F&quot;" newline="True"/>
+                <comment text="update lcv/index"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="output statement displaying the average temperature over the period of days in the state entered"/>
+            <output expression="&quot;The average temperature in &quot; &amp; state &amp; &quot; over the &quot; &amp; size &amp; &quot; day period was &quot; &amp; ToFixed(avgTemp, 2) &amp; &quot;&#176;F.&quot;" newline="True"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

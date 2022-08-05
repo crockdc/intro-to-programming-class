@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="parhamb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-09-15 02:29:12 PM"/>
+        <attribute name="created" value="cGFyaGFtYjtXMDAwNFIwMTA4QzAwMUI7MjAxOS0wMi0yNTsxMDoyMToxNCBBTTsyODM0"/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0xMS0wODswNzo0ODoxNyBQTTsxO3BhcmhhbWI7VzAwMDRSMDEwOEMwMDFCOzIwMTktMDItMjU7MTA6MjE6MTQgQU07bGFzdG5hbWVfZmlyc3RuYW1lX0E0X0ZPUl9Mb29wX0N1c3RvbWVyX0luZm9ybWF0aW9uICgxKS5mcHJnOzExNTMy"/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0xMS0wODswODo0OTowNyBQTTsxO3BhcmhhbWI7VzAwMDRSMDEwOEMwMDFCOzIwMTktMDItMjU7MTA6MjE6MTQgQU07bGFzdG5hbWVfZmlyc3RuYW1lX0E0X0ZPUl9Mb29wX0N1c3RvbWVyX0luZm9ybWF0aW9uLmZwcmc7MTEzNzE="/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMS0wNC0yNTswNDo0NTowNiBQTTsxNjsyODMx"/>
+        <attribute name="edited" value="cGFyaGFtYjtXNEc4M1REMjsyMDIxLTA2LTA3OzA2OjM5OjEwIFBNOzE4OzI2OTU="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjEtMDktMTU7MDI6Mjk6MTIgUE07Mzs0MjA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:    Type your first &amp; last name here&#13;&#10;PROGRAM NAME:  Customer Information Program using a While Loop&#13;&#10;DATE WRITTEN:  Type Current date here&#13;&#10;PURPOSE: DEMONSTRATE BASIC WHILE LOOP CONCEPT"/>
+            <comment text="Declare variables in alpha order"/>
+            <comment text="answer is the lcv"/>
+            <comment text="While LOOP&#13;&#10;1) programmer must decide on the lcv name or identifier&#13;&#10;2) lcv must be initialized&#13;&#10;3) lcv must be tested&#13;&#10;4) lcv must be updated inside the WHILE LOOP"/>
+            <declare name="answer, customerName" type="String" array="False" size=""/>
+            <declare name="averagePurchase, purchaseAmount, totalAmount" type="Real" array="False" size=""/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <comment text="Initialize variable(s) where calculated results are stored."/>
+            <assign variable="averagePurchase" expression="0.0"/>
+            <assign variable="count" expression="0"/>
+            <assign variable="totalAmount" expression="0.0"/>
+            <comment text="Main Column Heading"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <output expression="&quot;CUSTOMER PURCHASE INFORMATION&quot;" newline="True"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <comment text="Sub Column Heading"/>
+            <output expression="&quot;CUSTOMER NAME                       PURCHASE AMOUNT&quot;" newline="True"/>
+            <output expression="&quot;==============================================================&quot;" newline="True"/>
+            <comment text="Initialize lcv &quot;answer&quot;"/>
+            <output expression="&quot;Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] &quot;" newline="True"/>
+            <input variable="answer"/>
+            <comment text="Display a blank line"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <comment text="While Loop&#13;&#10;testing the lcv To enter more than one customer name and purchase amount"/>
+            <while expression="(answer == &quot;y&quot;) or (answer == &quot;Y&quot;)">
+                <comment text="Input Operations"/>
+                <output expression="&quot;Enter Customer's name &quot;" newline="True"/>
+                <input variable="customerName"/>
+                <output expression="&quot;How much did the customer spend on this item? &quot;" newline="True"/>
+                <input variable="purchaseAmount"/>
+                <comment text="keep a running total of the purchase amounts per customer "/>
+                <assign variable="totalAmount" expression="totalAmount + purchaseAmount"/>
+                <comment text="count or tally the number of customers / purchases"/>
+                <assign variable="count" expression="count + 1"/>
+                <comment text="Output each customer name and their purchase amount as a column"/>
+                <output expression="customerName &amp; &quot;                        &quot; &amp; &quot;$&quot; &amp; toFixed(purchaseAmount, 2)" newline="True"/>
+                <comment text="update lcv answer"/>
+                <output expression="&quot;Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] &quot;" newline="True"/>
+                <input variable="answer"/>
+                <output expression="&quot; &quot;" newline="True"/>
+                <comment text="end while loop"/>
+            </while>
+            <comment text="calculate the average purchase amount"/>
+            <assign variable="averagePurchase" expression="totalAmount / count"/>
+            <comment text="Output operations"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="Displays the total amount of purchases for all the customers"/>
+            <output expression="&quot;Customer Total Purchases = &quot; &amp; &quot;               &quot; &amp; &quot;$&quot; &amp; toFixed(totalAmount, 2)" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="Displays the Average of purchases for all the customers"/>
+            <output expression="&quot;THE AVERAGE PURCHASE PRICE = &quot; &amp; &quot;               &quot; &amp; &quot;$&quot; &amp; toFixed(averagePurchase, 2)" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <output expression="&quot;THIS PROGRAM IS COMPLETE - EDITED BY YOUR FIRST NAME AND LAST NAME&quot;" newline="True"/>
+            <output expression="&quot;====================================================================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

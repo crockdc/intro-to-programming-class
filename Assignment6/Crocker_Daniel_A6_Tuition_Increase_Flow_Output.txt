@@ -1,0 +1,20 @@
+What is the amount of the starting tuition?[Decimals may be entered]
+8000
+What is the percentage of increase?[Enter in decimal format(i.e. for 3% type 0.03)]
+0.03
+How many years are you projecting the tuition increase?[Enter whole numbers only]
+5
+======================================================
+PROJECTED TUITIONS(PER SEMESTER FOR FULL-TIME STUDENTS)
+======================================================
+YEAR          PROJECTED TUITION
+======================================================
+1                     $8240.00
+2                     $8487.20
+3                     $8741.82
+4                     $9004.07
+5                     $9274.19
+======================================================
+THESE PROJECTIONS REFLECT A 3% ANNUAL INCREASE
+======================================================
+This program is complete - Edited by Daniel Crocker

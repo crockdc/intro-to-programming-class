@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-27 08:14:46 AM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMTk7MDY6NTY6NDMgQU07NDA5MA=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMTk7MDc6NDg6NDggQU07ODs0MjEy"/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0xMS0yNzswODoxNDo0NiBBTTsxOzI3NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  first &amp; last name&#13;&#10;PROGRAM NAME: Creating a list of employee names&#13;&#10;DATE WRITTEN: (Enter Current Date)&#13;&#10;&#13;&#10;PURPOSE: Create a list / array of names that will be stored simultaneously inside the computer. These names may be sorted, searched for specific names etc.."/>
+            <comment text="Define the lcv/index of the list / array"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many names will be entered into this list? &quot;" newline="False"/>
+            <input variable="size"/>
+            <comment text="Declare variables"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="True" size="size"/>
+            <comment text="Initialize lcv/index count"/>
+            <assign variable="count" expression="0"/>
+            <comment text="Use a WHILE LOOP to create the name list / array"/>
+            <while expression="count &lt; size">
+                <comment text="INPUT OPERATIONS"/>
+                <output expression="&quot;Enter name # &quot; &amp; count + 1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="name[count]"/>
+                <comment text="update the lcv/index"/>
+                <assign variable="count" expression="count + 1"/>
+                <comment text="end while loop"/>
+            </while>
+            <comment text="Write column heading"/>
+            <output expression="&quot;                          UNSORTED LIST&quot;" newline="True"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="reset lcv/index count to 0"/>
+            <assign variable="count" expression="0"/>
+            <comment text="Use while loop to write the name list"/>
+            <while expression="count &lt; size">
+                <output expression="name[count]" newline="True"/>
+                <comment text="update the lcv/index"/>
+                <assign variable="count" expression="count + 1"/>
+                <comment text="end while loop"/>
+            </while>
+            <comment text="Output final separating line"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

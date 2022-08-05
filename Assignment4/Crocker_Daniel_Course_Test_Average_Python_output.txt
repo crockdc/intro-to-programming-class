@@ -1,0 +1,45 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\Assignments\Assignment4\Crocker_Daniel_Course_Test_Average.py
+==============================================================
+CLASS TEST SCORE INFORMATION
+==============================================================
+STUDENT NAME                       TEST SCORE
+==============================================================
+Do you wish to enter a student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+Y
+ 
+Enter the student's name 
+Shelly Smith
+What is the student's test score? 
+97.88
+Shelly Smith                        97.88%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter the student's name 
+Jack Grant
+What is the student's test score? 
+63.9
+Jack Grant                          63.90%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter the student's name 
+Alisha Campbell
+What is the student's test score? 
+84.59
+Alisha Campbell                     84.59%
+Do you wish to enter an additional student's name and test score? [type 'y' or 'Y' otherwise enter 'no'] 
+no
+ 
+==============================================================
+TOTAL TEST SCORES =                246.37
+==============================================================
+THE CLASS AVERAGE =                 82.12%
+==============================================================
+GOOD CLASS AVERAGE
+==============================================================
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER
+==============================================================

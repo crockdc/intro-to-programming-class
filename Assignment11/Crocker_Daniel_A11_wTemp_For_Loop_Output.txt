@@ -1,0 +1,34 @@
+================================================================================
+           Unsorted Daily Temperature List for the State of New York            ================================================================================
+                                Day #1: 62.12°F                                 
+                                Day #2: 80.00°F                                 
+                                Day #3: 71.87°F                                 
+                                Day #4: 42.10°F                                 
+                                Day #5: 39.00°F                                 
+                                Day #6: 32.23°F                                 
+                                Day #7: 27.00°F                                 
+                                Day #8: 69.90°F                                 
+                                Day #9: 41.00°F                                 
+                                Day #10: 54.20°F                                
+================================================================================
+    The minimum temperature in New York over the 10 day period was  27.00°F     
+    The maximum temperature in New York over the 10 day period was  80.00°F     
+    The average temperature in New York over the 10 day period was  51.94°F     
+================================================================================
+================================================================================
+            Sorted Daily Temperature List for the State of New York             ================================================================================
+                                Day #1: 27.00°F                                 
+                                Day #2: 32.23°F                                 
+                                Day #3: 39.00°F                                 
+                                Day #4: 41.00°F                                 
+                                Day #5: 42.10°F                                 
+                                Day #6: 54.20°F                                 
+                                Day #7: 62.12°F                                 
+                                Day #8: 69.90°F                                 
+                                Day #9: 71.87°F                                 
+                                Day #10: 80.00°F                                
+================================================================================
+    The minimum temperature in New York over the 10 day period was  27.00°F     
+    The maximum temperature in New York over the 10 day period was  80.00°F     
+    The average temperature in New York over the 10 day period was  51.94°F     
+================================================================================

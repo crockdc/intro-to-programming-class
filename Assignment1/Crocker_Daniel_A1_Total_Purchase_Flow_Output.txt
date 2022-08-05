@@ -1,0 +1,23 @@
+Enter the price of item #01
+421.22
+Enter the price of item #02
+1019.99
+Enter the price of item #03
+12.99
+Enter the price of item #04
+21199.00
+Enter the price of item #05
+2489.10
+=======================================================
+TOTAL PURCHASE RECEIPT         /        INFORMATION
+=======================================================
+PRICE FOR ITEM #01:                      $421.22
+PRICE FOR ITEM #02:                      $1019.99
+PRICE FOR ITEM #03:                      $12.99
+PRICE FOR ITEM #04:                      $21199.00
+PRICE FOR ITEM #05:                      $2489.10
+=======================================================
+SUBTOTAL = $25142.30
+SALES TAX = $1759.96
+TOTAL SALES = $26902.26
+=======================================================

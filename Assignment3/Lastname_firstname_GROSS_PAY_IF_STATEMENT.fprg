@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="parhamb"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-09-23 10:17:56 AM"/>
+        <attribute name="created" value="cGFyaGFtYjtXMDAwNFIwMTA4QzAwMUI7MjAxOS0wOS0zMDswNjoyMTozNSBQTTsyODYw"/>
+        <attribute name="edited" value="cGFyaGFtYjtXMDAwNFIwMTA4QzAwMUI7MjAxOS0wOS0zMDswOTowNToyOSBQTTsxODszMDMy"/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDItMDU7MDM6NTE6MTYgUE07MTtCZXR0eWUgSmV3ZWwgU2lnaCBQYTtERVNLVE9QLTlBTjM1VDg7MjAyMC0wMS0yMDswNTowMToyMiBQTTtMYXN0bmFtZV9maXJzdG5hbWVfR1JPU1NfUEFZXzEuZnByZzsxMTcyNA=="/>
+        <attribute name="edited" value="QmV0dHllO0pFV0VMX1NJR0g7MjAyMC0wMi0wODswNjo0OToxMiBBTTsxOzI3NjM="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDktMjM7MTA6MTc6NTYgQU07MTA7NDI0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="PROGRAMMER:  your first and last name&#13;&#10;PROGRAM NAME: GROSS PAY SAMPLE USING IF STATEMENTS&#13;&#10;DATE WRITTEN: 1/3/2020&#13;&#10;PURPOSE: CALCULATE GROSS PAY BASED ON HOURS WORKED"/>
+            <comment text="Declare all variables in alphabetical order"/>
+            <declare name="employeeName" type="String" array="False" size=""/>
+            <declare name="grossPay" type="Real" array="False" size=""/>
+            <declare name="hoursWorked" type="Real" array="False" size=""/>
+            <declare name="overTimeHours" type="Real" array="False" size=""/>
+            <declare name="overTimePay" type="Real" array="False" size=""/>
+            <declare name="payRate" type="Real" array="False" size=""/>
+            <declare name="regularPay" type="Real" array="False" size=""/>
+            <comment text="Initialize the processed / variables storing calculations"/>
+            <assign variable="grossPay" expression="0.00"/>
+            <assign variable="overTimeHours" expression="0.00"/>
+            <assign variable="overTimePay" expression="0.00"/>
+            <assign variable="regularPay" expression="0.00"/>
+            <comment text="INPUT OPERATIONS"/>
+            <output expression="&quot;&lt;ENTER EMPLOYEE'S FULL NAME&gt; &quot;" newline="True"/>
+            <input variable="employeeName"/>
+            <output expression="&quot;&lt;HOW MANY HOURS DID &quot; &amp; employeeName &amp; &quot; WORK?&gt; &quot;" newline="True"/>
+            <input variable="hoursWorked"/>
+            <output expression="employeeName &amp; &quot; WHAT IS YOUR HOURLY RATE? &quot;" newline="True"/>
+            <input variable="payRate"/>
+            <comment text="Preliminary Output Statements"/>
+            <comment text="Output Operations"/>
+            <output expression="&quot;================================================================&quot;" newline="True"/>
+            <output expression="&quot;PAYROLL INFORMATION FOR: &quot; &amp; employeeName" newline="True"/>
+            <output expression="&quot;================================================================&quot;" newline="True"/>
+            <output expression="&quot;  Hours Worked = &quot; &amp; ToFixed(hoursWorked, 2)" newline="True"/>
+            <output expression="&quot;   Rate of Pay = $ &quot; &amp; ToFixed(payRate, 2)" newline="True"/>
+            <output expression="&quot;================================================================&quot;" newline="True"/>
+            <comment text="Use IF statement to determine Gross Pay based on number of hours worked."/>
+            <if expression="(hoursWorked &lt;= 40)">
+                <then>
+                    <comment text="Calculate Gross Pay"/>
+                    <assign variable="grossPay" expression="hoursWorked * payRate"/>
+                    <output expression="&quot;     Gross Pay = $ &quot; &amp; ToFixed(grossPay, 2)" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="overTimeHours" expression="hoursWorked - 40"/>
+                    <assign variable="overTimePay" expression="overTimeHours * (payRate * 1.5)"/>
+                    <assign variable="regularPay" expression="40 * payRate"/>
+                    <assign variable="grossPay" expression="regularPay + overTimePay"/>
+                    <output expression="&quot;OVER TIME HOURS = &quot; &amp; ToFixed(overTimeHours, 2)" newline="True"/>
+                    <output expression="&quot;OVER TIME PAY = $ &quot; &amp; ToFixed(overTimePay, 2)" newline="True"/>
+                    <output expression="&quot;REGULAR PAY = $ &quot; &amp; ToFixed(regularPay, 2)" newline="True"/>
+                    <output expression="&quot;     Gross Pay = $ &quot; &amp; ToFixed(grossPay, 2)" newline="True"/>
+                    <comment text="End if statement"/>
+                </else>
+            </if>
+            <output expression="&quot;================================================================&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

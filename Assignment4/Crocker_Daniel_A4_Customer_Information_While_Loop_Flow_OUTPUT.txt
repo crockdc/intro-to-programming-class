@@ -1,0 +1,39 @@
+==============================================================
+CUSTOMER PURCHASE INFORMATION
+==============================================================
+CUSTOMER NAME                       PURCHASE AMOUNT
+==============================================================
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+Y
+ 
+Enter Customer's name 
+Sarah Lee Jones
+How much did the customer spend on this item? 
+17999.99
+Sarah Lee Jones                        $17999.99
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter Customer's name 
+Josh Alan Brooks
+How much did the customer spend on this item? 
+43250
+Josh Alan Brooks                        $43250.00
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+Y
+ 
+Enter Customer's name 
+Jaylene McDonald
+How much did the customer spend on this item? 
+17022.24
+Jaylene McDonald                        $17022.24
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+n
+ 
+====================================================================================================
+CUSTOMER TOTAL PURCHASES =                $78272.23
+====================================================================================================
+THE AVERAGE PURCHASE PRICE =                $26090.74
+====================================================================================================
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER
+====================================================================================================

@@ -1,0 +1,35 @@
+Enter the name of Student #1
+John
+Enter quiz #1 results for John
+72.4
+Enter the name of Student #2
+Sally
+Enter quiz #2 results for Sally
+89.9
+Enter the name of Student #3
+Daniel
+Enter quiz #3 results for Daniel
+77.7
+Enter the name of Student #4
+Angela
+Enter quiz #4 results for Angela
+97.5
+Enter the name of Student #5
+Emily
+Enter quiz #5 results for Emily
+94.6
+=======================================================
+                 STUDENT QUIZZES
+=======================================================
+STUDENT NAME                   QUZZES
+=======================================================
+John                      72.40
+Sally                      89.90
+Daniel                      77.70
+Angela                      97.50
+Emily                      94.60
+=======================================================
+Total of the quizzes = 432.10
+=======================================================
+QUIZ AVERAGE = 86.42%
+=======================================================

@@ -1,0 +1,20 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\Assignments\Assignment3\Crocker_Daniel_A3_Software_Sales.py
+What is the price of the Software?
+109.99
+How many software packages are to be purchased?
+85
+
+
+================================================================================
+                            The cost per software package = $    109.99
+          The total number of software packages purchased =       85
+================================================================================
+================================================================================
+                                      The discount % rate =       30.00%
+                           The calculated discount amount = $  2,804.74
+      Total amount of software purchase prior to discount = $  9,349.15
+    Final software purchase price after applying discount = $  6,544.40
+================================================================================

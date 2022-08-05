@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bettye Jewel Sigh Pa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-04-20 05:09:35 AM"/>
+        <attribute name="created" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDE6MjcgQU07NDA3Mw=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDc6MjAgQU07NTtCZXR0eWUgSmV3ZWwgU2lnaCBQYTtERVNLVE9QLTlBTjM1VDg7MjAyMC0wNC0xOTswNjo1Njo0MyBBTTtlbXBsb3llZU5hbWVzX3JldmlzZWQuZnByZzsxMTA4Mg=="/>
+        <attribute name="edited" value="QmV0dHllIEpld2VsIFNpZ2ggUGE7REVTS1RPUC05QU4zNVQ4OzIwMjAtMDQtMjA7MDU6MDk6MzUgQU07Mzs0MTkw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Programmer:  First &amp; Last name&#13;&#10;Program Name: Creating the name array / list&#13;&#10;Date Written: March 25, 2020&#13;&#10;Purpose: Demonstrate how to define, create and display an array with test averages"/>
+            <comment text="define the size or the list/array"/>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many test averages will be entered into this list? &quot;" newline="False"/>
+            <input variable="size"/>
+            <comment text="count is the lcv/index"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="testAvg" type="Real" array="True" size="size"/>
+            <assign variable="count" expression="0"/>
+            <while expression="count &lt; size">
+                <output expression="&quot;Enter Test Average # &quot; &amp; count + 1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="testAvg[count]"/>
+                <comment text="update lcv"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+            <comment text="display heading"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <output expression="&quot;                 UNSORTED TEST AVERAGE LIST&quot;" newline="True"/>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <output expression="&quot; &quot;" newline="True"/>
+            <comment text="Reset array / list index back to 0"/>
+            <assign variable="count" expression="0"/>
+            <comment text="test lcv / index"/>
+            <while expression="count &lt; size">
+                <output expression="testAvg[count]" newline="True"/>
+                <comment text="update lcv/index"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+            <output expression="&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;" newline="True"/>
+            <comment text="END PROGRAM"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,43 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\crock\OneDrive\Desktop\programming class\Assignments\Assignment4\Crocker_Daniel_A4_Customer_Information_WHILE_LOOP.py
+==============================================================
+CUSTOMER PURCHASE INFORMATION
+==============================================================
+CUSTOMER NAME                       PURCHASE AMOUNT
+==============================================================
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+Y
+ 
+Enter Customer's name 
+Janet May Francois
+How much did the customer spend on this item? 
+4323.32
+Janet May Francois                      $     4,323.32
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+y
+ 
+Enter Customer's name 
+Dennis Jane
+How much did the customer spend on this item? 
+54322.99
+Dennis Jane                             $    54,322.99
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+Y
+ 
+Enter Customer's name 
+Brook Faulkner
+How much did the customer spend on this item? 
+17199.14
+Brook Faulkner                          $    17,199.14
+Do you wish to process a customer's information? [type 'y' or 'Y' otherwise enter 'no'] 
+no
+ 
+==============================================================
+CUSTOMER TOTAL PURCHASES =              $    75,845.45
+==============================================================
+THE AVERAGE PURCHASE PRICE =            $    25,281.82
+==============================================================
+THIS PROGRAM IS COMPLETE - EDITED BY DANIEL CROCKER
+==============================================================

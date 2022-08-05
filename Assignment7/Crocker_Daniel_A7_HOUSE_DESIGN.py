@@ -1,0 +1,467 @@
+from turtle import *
+
+# PROGRAM NAME: Assignment #07 Graphic House Design using FOR LOOPS
+# PROGRAM DESCRIPTION: Design a house while implementing FOR LOOPS
+# PROGRAMMER: Daniel Crocker
+# DATE: 3/15/2022
+
+speed(0)
+
+# Grass
+bgcolor("darkolivegreen")
+
+# Sky
+penup()
+goto(-2000, -100)
+pendown()
+color("lavender")
+begin_fill()
+
+for i in range(2): #FOR LOOP to create a square
+    forward(3000)
+    left(90)
+    forward(600)
+    left(90)
+end_fill()
+
+# Flower 1
+penup()
+goto(-150, -100)
+color("chartreuse")
+pendown()
+left(90)
+pensize(5)
+forward(20)
+left(45)
+forward(20)
+penup()
+goto(-150, -100)
+pendown()
+setheading(90)
+forward(40)
+right(45)
+forward(25)
+penup()
+goto(-150, -100)
+pendown()
+setheading(90)
+forward(60)
+left(45)
+forward(30)
+penup()
+goto(-150, -40)
+pendown()
+setheading(90)
+forward(20)
+setheading(0)
+penup()
+forward(10)
+pendown()
+color("pink", "yellow")
+
+for i in range(8):  #FOR LOOP to create flower petals
+    begin_fill()
+    circle(10)
+    end_fill()
+    left(45)
+    forward(15)
+
+# Flower 2
+penup()
+goto(140, -100)
+color("lime")
+pendown()
+left(90)
+pensize(5)
+forward(20)
+left(45)
+forward(20)
+penup()
+goto(140, -100)
+pendown()
+setheading(90)
+forward(40)
+right(45)
+forward(25)
+penup()
+goto(140, -100)
+pendown()
+setheading(90)
+forward(60)
+left(45)
+forward(30)
+penup()
+goto(140, -40)
+pendown()
+setheading(90)
+forward(20)
+setheading(0)
+penup()
+forward(10)
+pendown()
+color("magenta", "gold")
+
+for i in range(8): #FOR LOOP to create flower petals
+    begin_fill()
+    circle(10)
+    end_fill()
+    left(45)
+    forward(15)
+
+# Tree 1
+penup()
+goto(300, -300)
+pendown()
+color("tan", "saddlebrown")
+setheading(0)
+begin_fill()
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+end_fill()
+color("mediumspringgreen", "darkgreen")
+begin_fill()
+setheading(0)
+forward(60)
+left(115)
+forward(100)
+left(110)
+goto(270, -300)
+goto(300, -300)
+end_fill()
+
+# Tree 2
+penup()
+goto(240, -230)
+pendown()
+color("tan", "saddlebrown")
+setheading(0)
+begin_fill()
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+end_fill()
+color("mediumspringgreen", "darkgreen")
+begin_fill()
+setheading(0)
+forward(60)
+left(115)
+forward(100)
+left(110)
+goto(210, -230)
+goto(240, -230)
+end_fill()
+
+# Tree 3
+penup()
+goto(-280, -300)
+pendown()
+color("tan", "saddlebrown")
+setheading(0)
+begin_fill()
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+end_fill()
+color("mediumspringgreen", "darkgreen")
+begin_fill()
+setheading(0)
+forward(60)
+left(115)
+forward(100)
+left(110)
+goto(-310, -300)
+goto(-280, -300)
+end_fill()
+
+# Tree 4
+penup()
+goto(-220, -230)
+pendown()
+color("tan", "saddlebrown")
+setheading(0)
+begin_fill()
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+right(90)
+forward(30)
+end_fill()
+color("mediumspringgreen", "darkgreen")
+begin_fill()
+setheading(0)
+forward(60)
+left(115)
+forward(100)
+left(110)
+goto(-250, -230)
+goto(-220, -230)
+end_fill()
+setheading(0)
+
+# Sun
+penup()
+goto(-320, 225)
+pendown()
+color("sandybrown")
+begin_fill()
+circle(50)
+end_fill()
+
+# Cloud 1
+penup()
+goto(200, 200)
+pendown()
+color("whitesmoke")
+
+for i in range(5): #FOR LOOP to create cloud circles
+    begin_fill()
+    circle(25)
+    end_fill()
+    penup()
+    forward(30)
+    pendown()
+
+# Cloud 2
+penup()
+goto(-100, 300)
+pendown()
+color("snow")
+
+for i in range(4):  #FOR LOOP to create cloud circles
+    begin_fill()
+    circle(30)
+    end_fill()
+    penup()
+    forward(35)
+    pendown()
+
+# House
+penup()
+goto(-100, -100)
+pendown()
+pensize(3)
+color("turquoise", "steelblue") # (stroke, fill)
+begin_fill()
+
+for i in range(4): #FOR LOOP to create square
+    forward(170)
+    left(90)
+end_fill()
+
+# Chimney
+penup()
+goto(20, 130)
+pendown()
+color("paleturquoise", "steelblue")
+begin_fill()
+
+for i in range(2): #FOR LOOP to create square
+    forward(40)
+    left(90)
+    forward(100)
+    left(90)
+end_fill()
+
+# Roof
+penup()
+goto(-127, 70)
+pendown()
+begin_fill()
+
+for i in range(3): #FOR LOOP to create triangle
+    forward(225)
+    left(120)
+end_fill()
+
+# Window 1
+penup()
+goto(0,0)
+pendown()
+color("peru", "white")
+begin_fill()
+
+for i in range(4): #FOR LOOP to create square
+    forward(50)
+    left(90)
+end_fill()
+
+# Window 1 Cross - Horizontal Line
+penup()
+goto(0, 25)
+pendown()
+color("peru")
+forward(50)
+
+# Window 1 Cross - Vertical Line
+penup()
+goto(25, 0)
+pendown()
+left(90)
+forward(50)
+
+# Window 2
+penup()
+goto(-80,0)
+pendown()
+right(90)
+color("peru", "white")
+begin_fill()
+
+for i in range(4): #FOR LOOP to create square
+    forward(50)
+    left(90)
+end_fill()
+
+# Window 2 Cross - Horizontal Line
+penup()
+goto(-80, 25)
+pendown()
+color("peru")
+forward(50)
+
+# Window 2 Cross - Vertical Line
+penup()
+goto(-55, 0)
+pendown()
+left(90)
+forward(50)
+
+# Door
+penup()
+goto(-40, -97)
+pendown()
+right(90)
+color("wheat")
+begin_fill()
+
+for i in range(2): #FOR LOOP to create rectangle
+    forward(50)
+    left(90)
+    forward(80)
+    left(90)
+end_fill()
+
+# Door Handle
+penup()
+goto(-30, -60)
+pendown()
+color("peru")
+begin_fill()
+circle(5)
+end_fill()
+
+# Smoke
+penup()
+goto(35, 230)
+pendown()
+color("dimgray")
+
+for i in range(5): #FOR LOOP to create smoke circles
+    begin_fill()
+    circle(10)
+    end_fill()
+    penup()
+    left(45)
+    forward(20)
+    right(45)
+    pendown()
+    begin_fill()
+    circle(10)
+    end_fill()
+    penup()
+    left(135)
+    forward(20)
+    right(135)
+    pendown()
+
+# Sidewalk
+penup()
+goto(-40, -97)
+pendown()
+color("tan", "grey")
+begin_fill()
+right(95)
+forward(1000)
+left(95)
+forward(225)
+left(95)
+forward(1000)
+goto(-40, -97)
+end_fill()
+
+# Person
+penup()
+goto(0, -200)
+pendown()
+setheading(0)
+color("tan")
+begin_fill()
+circle(40)
+end_fill()
+penup()
+goto(-7, -150)
+dot(10, "skyblue")
+goto(7, -150)
+dot(10, "skyblue")
+goto(-10, -180)
+setheading(-60)
+color("crimson")
+pendown()
+
+for i in range(20): #FOR LOOP to create the smile
+    forward(1)
+    left(6)
+    
+penup()
+goto(0, -200)
+setheading(-90)
+color("tan")
+pendown()
+pensize(5)
+forward(10)
+left(40)
+forward(20)
+right(20)
+forward(30)
+penup()
+goto(0, -210)
+setheading(-130)
+pendown()
+forward(10)
+left(20)
+forward(30)
+penup()
+goto(0, -210)
+setheading(-90)
+pendown()
+forward(30)
+left(10)
+forward(40)
+penup()
+goto(0, -250)
+pendown()
+right(10)
+forward(40)
+
+hideturtle() # Hides the turtle
+
+# PROGRAM COMPLETE
+# End Program
+
+
+

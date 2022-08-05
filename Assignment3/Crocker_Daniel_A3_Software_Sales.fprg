@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="crock"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-01 08:10:46 PM"/>
+        <attribute name="created" value="Y3JvY2s7REFOSUVMOzIwMjItMDItMDE7MDU6MTE6MjAgUE07MjIyMQ=="/>
+        <attribute name="edited" value="Y3JvY2s7REFOSUVMOzIwMjItMDItMDE7MDg6MTA6NDYgUE07MTU7MjM5Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="NAME: Daniel Crocker&#13;&#10;PROGRAM NAME: Software Sales&#13;&#10;PURPOSE: To calculate software sales based off of the discount received depending on the quantity sold.&#13;&#10;DATE: February 1, 2022"/>
+            <comment text="Declare Variables."/>
+            <declare name="discountTotal, discountRate, finalTransactionPrice, softwarePrice, transactionPreTotal" type="Real" array="False" size=""/>
+            <declare name="softwareQuantity" type="Integer" array="False" size=""/>
+            <comment text="Initialize variables for calculating."/>
+            <assign variable="discountTotal" expression="0.0"/>
+            <assign variable="transactionPreTotal" expression="0.0"/>
+            <assign variable="finalTransactionPrice" expression="0.0"/>
+            <assign variable="discountRate" expression="0.00"/>
+            <comment text="Input operations."/>
+            <output expression="&quot;What is the price of the Software?&quot;" newline="True"/>
+            <input variable="softwarePrice"/>
+            <output expression="&quot;How many software packages are to be purchased?&quot;" newline="True"/>
+            <input variable="softwareQuantity"/>
+            <comment text="Initial output operations."/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;&quot;" newline="True"/>
+            <output expression="&quot;====================================================================&quot;" newline="True"/>
+            <output expression="&quot;The cost per software package = $&quot; &amp; ToFixed(softwarePrice, 2)" newline="True"/>
+            <output expression="&quot;The total number of software packages purchased = &quot; &amp; softwareQuantity" newline="True"/>
+            <output expression="&quot;====================================================================&quot;" newline="True"/>
+            <comment text="If statement to determine if and how much the discount will be."/>
+            <if expression="softwareQuantity &lt;= 9">
+                <then>
+                    <assign variable="discountRate" expression="0.00"/>
+                </then>
+                <else>
+                    <if expression="softwareQuantity &lt;= 19 and softwareQuantity &gt;= 10">
+                        <then>
+                            <assign variable="discountRate" expression="0.10"/>
+                        </then>
+                        <else>
+                            <if expression="softwareQuantity &lt;= 49 and softwareQuantity &gt;= 20">
+                                <then>
+                                    <assign variable="discountRate" expression="0.20"/>
+                                </then>
+                                <else>
+                                    <if expression="softwareQuantity &lt;= 99 and softwareQuantity &gt;= 50">
+                                        <then>
+                                            <assign variable="discountRate" expression="0.30"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="discountRate" expression="0.40"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <comment text="Calculate the discount amount."/>
+            <assign variable="discountTotal" expression="discountRate * softwareQuantity * softwarePrice"/>
+            <comment text="Calculate the total amount of software purchase prior to any discount."/>
+            <assign variable="transactionPreTotal" expression="softwarePrice * softwareQuantity"/>
+            <comment text="Calculate the final purchase price combining the discount and software price."/>
+            <assign variable="finalTransactionPrice" expression="transactionPreTotal - discountTotal"/>
+            <comment text="Output final results."/>
+            <output expression="&quot;====================================================================&quot;" newline="True"/>
+            <output expression="&quot;The discount % rate = &quot; &amp; ToFixed(discountRate * 100, 2) &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;The calculated discount amount = $&quot; &amp; ToFixed(discountTotal, 2)" newline="True"/>
+            <output expression="&quot;Total amount of software purchase prior to discount = $&quot; &amp; ToFixed(transactionPreTotal, 2)" newline="True"/>
+            <output expression="&quot;Final software purchase price after applying discount = $&quot; &amp; ToFixed(finalTransactionPrice, 2)" newline="True"/>
+            <output expression="&quot;====================================================================&quot;" newline="True"/>
+            <comment text="End Program."/>
+        </body>
+    </function>
+</flowgorithm>
